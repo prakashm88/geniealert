@@ -1,0 +1,48 @@
+The JavaScript Source 2 http://github.com/prakashm88/geniealert
+Created by: Prakash Mohankumar | http://itechgenie.com/ 
+
+GenieAlert - Customized Javascript Alert
+Version: 0.1
+Release date: 8th March 2011
+
+GenieAlert is a customized Alert alternated for the javascript alert box. 
+
+The GenieAlert provides the features to add custom buttons and functions to be called upon click of each buttons. The Title and the alert icon to be disaplyed can also be configured as per the user need. 
+
+Note: Note the default alert box of the javascript will be completely overridden by this utility.
+
+USAGE:
+
+1. Include the geniealert.js and style.css in the header.
+	<script type="text/javascript" src="geniealert.0.1.js" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+2. Place all the images in the "images" folder.
+3. Arguments for the customized alert, Alert Message, Array of Button names, Array of function names (with the arguments if necessary), Title for the alert window, URL for the image to be show in the alert window.
+4. On Calling the default alert("some text") the customized alert windos with default title as "Alert!" and an "information" icon will be shown.
+4. Create a Array of Text to be shown in the Alert Box, Create Array of function names to be called when the corresponding buttons are clciked, a Title for the Alert and the URl of the image to be shown inside the alertbox. (Make sure the image is 32px X 32px).
+5. Call the function as follows whereever ncessary. 
+
+	<script type="text/javascript" >
+
+function YourFunctionName()
+{
+var buttonList = ["Yes", "No", "Cancel"] ;
+var buttonListFunc = ["YesFunction()", "NoFunction()", "CancelFunction()"] ;
+alert("Sample alert with default settings") ;
+alert("Click on the following buttons to call the corresponding methods.", buttonList, buttonListFunc, "Alert Box", "images/error.png") ;
+}
+function YesFunction()
+{
+    // Your Code here 
+}
+function NoFunction()
+{
+    // Your Code here 
+}
+function CancelFunction()
+{
+   // Your Code here 
+}
+	</script>
+
+
