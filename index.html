@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>GenieAlert Sample</title>
+<script type="text/javascript" src="geniealert.0.1.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" >
+
+function AdvCallAlert()
+{
+var buttonList = ["Yes", "No", "Cancel"] ;
+var buttonListFunc = ["YesFunction()", "NoFunction()", "CancelFunction()"] ;
+alert("Click on the following buttons to call the corresponding methods.", buttonList, buttonListFunc, "Alert Box", "images/asd.jpg") ;
+}
+
+function CallAlert()
+{
+    alert("Sample Alert") ;
+}
+
+function YesFunction()
+{
+    document.getElementById('clickResult').innerHTML = "YesFunction" ;
+}
+
+function NoFunction()
+{
+    document.getElementById('clickResult').innerHTML = "NoFunction" ;
+}
+
+function CancelFunction()
+{
+    document.getElementById('clickResult').innerHTML = "CancelFunction" ;
+}
+
+</script>
+
+</head>
+<body>
+
+<input type="button" value="Simple Alert" onclick="CallAlert()" /><br/>
+<input type="button" value="Advanced Alert" onclick="AdvCallAlert()" />
+Function Called: <span id="clickResult">
+
+</span>
+</body>
+</html>
